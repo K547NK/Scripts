@@ -1,6 +1,0 @@
-#!/bin/bash
-mkdir /tmp/apt_history
-cp /var/log/apt/history.log* /tmp/apt_history
-cd /tmp/apt_history
-for archive in *.gz;do gunzip "$archive";done # Extract the logs
-grep Commandline * | awk -F'install ' '/install/{print $NF}' | xargs
