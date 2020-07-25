@@ -24,7 +24,7 @@ make &&
 sudo make install &&
 cd .. && rm -rf i3
 
-sudo aptitude install pulseaudio pavucontrol zathura tty-clock xterm htop vim neofetch neomutt isync msmtp pass notmuch mupdf scrot imagemagick polybar font-manager ranger slim compton python3-pip xorg i3lock feh telegram-desktop rofi -y
+sudo aptitude install pulseaudio pavucontrol zathura tty-clock compton-conf xterm htop vim neofetch neomutt isync msmtp pass notmuch mupdf scrot imagemagick polybar font-manager ranger slim compton python3-pip xorg i3lock feh telegram-desktop rofi -y
 sudo apt remove nano vim-tiny -y &&
 
 mkdir -p ~/.config/polybar
