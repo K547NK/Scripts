@@ -20,19 +20,21 @@ mkdir -p build && cd build/ &&
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers &&
 make &&
 sudo make install &&
-cd .. && rm -rf i3
+cd .. && rm -rf i3 &
+
+
+mkdir -p ~/.config/polybar && mv ~/Scripts/polybar-config ~/.config/polybar/config &
+mkdir ~/.config/i3 && mv ~/Scripts/i3-config ~/.config/i3/config &
+mkdir -p ~/.config/rofi/themes && mv ~/Scripts/rofi-launcher.rasi ~/.config/rofi/themes/launcher.rasi & mv ~/Scripts/rofi-config ~/.config/rofi/config &
+mkdir ~/.config/zathura && mv ~/Scripts/zathurarc ~/.config/zathura/zathurarc &
+mkdir ~/Documents &
+mkdir ~/Downloads &
+mkdir ~/Music &
+mkdir -p ~/Pictures/Screenshots &
+cp ~/Scripts/lock.sh ~/.config/i3/ &
+cp ~/Scripts/.vimrc ~/ &
+cp ~/Scripts/.Xresources ~/ &
 
 sudo aptitude install pulseaudio pavucontrol zathura tty-clock compton-conf xterm htop vim neofetch neomutt isync msmtp pass notmuch mupdf scrot imagemagick polybar font-manager ranger slim compton python3-pip xorg i3lock feh telegram-desktop rofi -y
-sudo apt remove nano vim-tiny -y &&
+sudo apt remove nano vim-tiny -y  && sudo reboot
 
-mkdir -p ~/.config/polybar && mv ~/Scripts/polybar-config ~/.config/polybar/config
-mkdir ~/.config/i3 && mv ~/Scripts/i3-config ~/.config/i3/config
-mkdir -p ~/.config/rofi/themes && mv ~/Scripts/rofi-launcher.rasi ~/.config/rofi/themes/launcher.rasi & mv ~/Scripts/rofi-config ~/.config/rofi/config
-mkdir ~/.config/zathura && mv ~/Scripts/zathurarc ~/.config/zathura/zathurarc
-mkdir ~/Documents &
-mkdir ~/Downloads
-mkdir ~/Music
-mkdir -p ~/Pictures/Screenshots &
-cp ~/Scripts/lock.sh ~/.config/i3/
-cp ~/Scripts/.vimrc ~/
-cp ~/Scripts/.Xresources ~/
