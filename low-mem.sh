@@ -20,7 +20,7 @@ mkdir -p build && cd build/
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers &&
 make &&
 sudo make install &&
-cd .. && rm -rf i3 &
+cd .. && rm -rf ~/i3 &
 
 
 mkdir -p ~/.config/polybar && mv ~/Scripts/polybar-config ~/.config/polybar/config &
